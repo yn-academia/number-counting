@@ -1,7 +1,7 @@
 # Network Game — Boots & Cats
 
-[![Ruby: RSpec](https://github.com/kigster/boots-and-cats/actions/workflows/rspec.yml/badge.svg)](https://github.com/kigster/boots-and-cats/actions/workflows/rspec.yml)
-[![Ruby: Rubocop](https://github.com/kigster/boots-and-cats/actions/workflows/rubocop.yml/badge.svg)](https://github.com/kigster/boots-and-cats/actions/workflows/rubocop.yml)
+[![Ruby: RSpec](https://github.com/kigster/number-counting/actions/workflows/rspec.yml/badge.svg)](https://github.com/kigster/number-counting/actions/workflows/rspec.yml)
+[![Ruby: Rubocop](https://github.com/kigster/number-counting/actions/workflows/rubocop.yml/badge.svg)](https://github.com/kigster/number-counting/actions/workflows/rubocop.yml)
 
 ## Game Definition
 
