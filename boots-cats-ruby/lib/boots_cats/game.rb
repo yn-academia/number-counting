@@ -104,27 +104,5 @@ module BootsCats
       players.remove(player)
       player.connection.close
     end
-
-    # MAX_SECONDS = 10
-    #
-    # def wait_for_timeout
-    #   this_player = current_player
-    #   time = 0
-    #   q = Queue.new
-    #   t = Thread.new do
-    #     while current_player == this_player
-    #       sleep 1
-    #       time += 1
-    #       if time >= MAX_SECONDS
-    #         q << this_player
-    #         break
-    #       end
-    #     end
-    #   end
-    #
-    #   t.join
-    #
-    #   lose!(q.pop, TIMEOUT)
-    # end
   end
 end
