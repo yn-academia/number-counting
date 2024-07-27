@@ -32,7 +32,7 @@ Here are a couple of screenshots showing of the game in action:
 
 <p><a href="doc/boots-cats-js-client.png"><img src="doc/boots-cats-js-client.png" width="80%" alt="Manual Clients"></a></p>
 
-### AI Clients (aka `cli-client`)
+### AI Clients (aka `ai-client`)
 
 <p><a href="doc/boots-cats-ai-client.png"><img src="doc/boots-cats-ai-client.png" width="80%" alt="AI Clients"></a></p>
 
@@ -101,7 +101,7 @@ And so on.
 
 To run AI clients, replace `cli-client` with `ai-client`.
 
-If you don't want to see packets sent to the client by the server, reduce log level to `info`: 
+The following server log levels produce various amount of output:
 
 ```bash
 # No logging
