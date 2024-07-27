@@ -103,8 +103,15 @@ To run AI clients, replace `cli-client` with `ai-client`.
 
 If you don't want to see packets sent to the client by the server, reduce log level to `info`: 
 
-```
-LOG_LEVEL=info ./bin/server
+```bash
+# No logging
+LOG_LEVEL=error ./bin/server
+
+# Minimal logging
+LOG_LEVEL=info  ./bin/server
+
+# Debug logging, includes network packages sent to all clients
+LOG_LEVEL=debug ./bin/server
 ```
 
 ### 2. Using Foreman to run AI Clients
