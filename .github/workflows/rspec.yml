@@ -1,0 +1,27 @@
+name: "Ruby: RSpec"
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  main:
+    name: "Ruby: RSpec"
+    runs-on: ubuntu-latest
+
+    steps:
+      - run: sudo apt-get update -yqq
+
+      - uses: actions/checkout@v4
+
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.2.4'
+          bundler-cache: true
+          working-directory: boots-cats-ruby
+
+      - name: "Run Rspec"
+        working-directory: boots-cats-ruby
+        run: bundle exec rspec --format documentation

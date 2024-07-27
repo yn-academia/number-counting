@@ -1,0 +1,27 @@
+inherit_from: .rubocop_todo.yml
+
+AllCops:
+  NewCops: enable
+
+require:
+  - rubocop-rake
+  - rubocop-rspec
+
+Style/IfUnlessModifier:
+  Enabled: false
+
+Metrics/ClassLength:
+  Max: 300
+
+Metrics/ModuleLength:
+  Enabled: false
+  
+Metrics/AbcSize:
+  Enabled: false
+
+Layout/HashAlignment:
+  Enabled: true
+  EnforcedColonStyle: table
+  EnforcedLastArgumentHashStyle: ignore_implicit
+  EnforcedHashRocketStyle: table
+

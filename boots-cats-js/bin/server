@@ -1,0 +1,5 @@
+#!/usr/bin/env node
+
+console.error("JS Server Code is not available.");
+
+process.exit(1);

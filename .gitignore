@@ -1,0 +1,7 @@
+.DS_Store
+.idea/artifacts/*
+.idea/inspectionProfiles/*
+.idea/copyright/*
+.idea/dataSources.ids
+.idea/dataSources.xml
+.idea/workspace.xml

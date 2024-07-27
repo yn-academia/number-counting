@@ -1,0 +1,6 @@
+ruby-server:  bash -c "cd ../boots-cats-ruby && ./bin/server 2>&1"
+cli-player-1: bash -c "sleep 1; cd ../boots-cats-js && ./bin/cli-client"
+cli-plkaer-2: bash -c "sleep 2; cd ../boots-cats-js && ./bin/cli-client"
+
+
+

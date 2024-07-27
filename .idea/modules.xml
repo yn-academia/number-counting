@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/academia.edu.iml" filepath="$PROJECT_DIR$/.idea/academia.edu.iml" />
+      <module fileurl="file://$PROJECT_DIR$/boots-cats-js/boots-cats-js.iml" filepath="$PROJECT_DIR$/boots-cats-js/boots-cats-js.iml" />
+      <module fileurl="file://$PROJECT_DIR$/boots-cats-ruby/boots-cats-ruby.iml" filepath="$PROJECT_DIR$/boots-cats-ruby/boots-cats-ruby.iml" />
+    </modules>
+  </component>
+</project>

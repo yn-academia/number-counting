@@ -1,0 +1,17 @@
+{
+  "name": "boots-cats-js",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "player": "bin/cli-client",
+    "ai": "bin/ai-client",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "volta": {
+    "node": "22.5.1",
+    "yarn": "4.3.1"
+  }
+}
