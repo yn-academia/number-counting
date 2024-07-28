@@ -5,10 +5,15 @@ module BootsCats
     # A collection of all connected players
     class PlayerSet
       extend Forwardable
-
+ 
       class InvalidActionError < StandardError; end
 
       def_delegators :@players, :size, :empty?, :each, :find, :<<, :[]
+     
+      # This file could easily be also Enumerable
+      # however we dont currebtly hse that.
+      # To use Enumerable methods, uncomment this line:
+      # include Enumerable
 
       attr_reader :current_index
 
