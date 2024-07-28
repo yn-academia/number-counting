@@ -71,7 +71,9 @@ ruby-rspec    Runs the Ruby RSpec tests for the server
   
 ## Running the Server and Clients
 
-There are two ways you can start both the server and the clients.
+You can test the functionality in several ways, which all result in running ruby server and several connected clients.
+
+But first, a note about server-side logging:
 
 ### Logging Level on the Server
 
@@ -80,12 +82,16 @@ The server process uses Ruby Logger class to log messages to `STDOUT`. To emulat
 For example:
 
 ```bash
+# By directly invoking the Ruby Server
+LOG_LEVEL=error cd boots-cats-ruby && ./bin/server
+
+# Or by using Foreman from the root of the project
 LOG_LEVEL=error make foreman-ai
 ```
 
 ### 1. Running the Manually
 
-First execute the setup:
+Please ensure you ran this command to ensure your Ruby and JS are all setup.
 
 ```bash
 make build
@@ -93,15 +99,15 @@ make build
 
 Then open 3 windows:
 
- 1. In the first window run `cd boots-cats-ruby && LOG_LEVEL=debug ./bin/server`
- 2. In the second window run `cd boots-cats-js  && ./bin/cli-client`
- 3. In the second window run `cd boots-cats-js  && ./bin/cli-client`
+ 1. In the first window, run `cd boots-cats-ruby && LOG_LEVEL=debug ./bin/server`
+ 2. In the second window, run `cd boots-cats-js  && ./bin/cli-client`
+ 3. In the second window, run `cd boots-cats-js  && ./bin/cli-client`
 
 And so on.
 
 To run AI clients, replace `cli-client` with `ai-client`.
 
-The following server log levels produce various amount of output:
+The following server log levels produce various output:
 
 ```bash
 # No logging
@@ -114,16 +120,19 @@ LOG_LEVEL=info  ./bin/server
 LOG_LEVEL=debug ./bin/server
 ```
 
-### 2. Using Foreman to run AI Clients
+### 2. Using Foreman to boot the Server + AI Clients
 
-This method works on all operating systems, and uses the `Procfile.ai` to start the server and the AI clients. 
+This method works on all operating systems and uses the `Procfile.ai` to start the server and the AI clients. 
 
-However, when using Foreman, all processes will appear in a single window, and may be difficult to debug.
+However, when using Foreman, all of the processes will appear in a single window, making it difficult to debug.
 
 ### 3. Using iTerm2 and ApppleScript to run either AI or CLI Clients.
 
-Because Foreman does not make it easy for a sub-process to receive input from STDIN, we do not offer a way
-to start CLI clients via Foreman. Instead, we offer two methods that are more flexible, that use AppleScript to drive iTerm2 to open a new window, split it into panels, and run a specific command in each panel.
+If you are an iTerm2 user, this should be the most flexible and easy to use method.
+
+Because Foreman does not make it easy for a sub-process to receive input from STDIN, we do not offer a way to start CLI clients via Foreman. 
+
+Instead, we offer you to use AppleScript to drive iTerm2: to open a new window, split it into panels, and run a specific command in each panel.
 
 If you have iTerm2 on OS-X installed, you should be able to use the commands:
 
@@ -131,6 +140,7 @@ If you have iTerm2 on OS-X installed, you should be able to use the commands:
 # Start a new iTerm2 window, with multiple panels dedicated to the server
 # and the AI clients.
 ❯ make iterm-ai
+
 # OR
 
 # Start a new iTerm2 window, with multiple panels dedicated to the server
@@ -138,7 +148,7 @@ If you have iTerm2 on OS-X installed, you should be able to use the commands:
 ❯ make iterm-cli
 ```
 
-This should start a new iTerm2 window, and split it into panes where the bottom pane is the server, and the middle-top and right-top are the clients. The left-most top panel is the open shell prompt.
+This should start a new iTerm2 window and split it into panes where the bottom pane is the server, and the middle-top and right-top are the clients. The left-most top panel is the open shell prompt.
 
 # Copyright
 
