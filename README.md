@@ -89,9 +89,9 @@ LOG_LEVEL=error cd boots-cats-ruby && ./bin/server
 LOG_LEVEL=error make foreman-ai
 ```
 
-### 1. Running the Manually
+### 1. Running All Commands Manually
 
-Please ensure you ran this command to ensure your Ruby and JS are all setup.
+You need to run the following command first, to ensure all Ruby and JS libraries are setup:
 
 ```bash
 make build
@@ -120,13 +120,13 @@ LOG_LEVEL=info  ./bin/server
 LOG_LEVEL=debug ./bin/server
 ```
 
-### 2. Using Foreman to boot the Server + AI Clients
+### 2. Automatic: Using Foreman for AI Clients
 
 This method works on all operating systems and uses the `Procfile.ai` to start the server and the AI clients. 
 
 However, when using Foreman, all of the processes will appear in a single window, making it difficult to debug.
 
-### 3. Using iTerm2 and ApppleScript to run either AI or CLI Clients.
+### 3. Automatic: Using iTerm2 and ApppleScript to run either AI or CLI Clients in iTerm2 panels.
 
 If you are an iTerm2 user, this should be the most flexible and easy to use method.
 
